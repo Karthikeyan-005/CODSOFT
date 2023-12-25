@@ -1,0 +1,64 @@
+import java.io.*;
+
+import java.util.Scanner;
+
+
+public class Currencyconverter{
+ 
+   public static void main(String[] args) {
+ 
+       Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Enter amount in USD: ");
+ 
+       double usdAmount = scanner.nextDouble();
+
+
+        System.out.println("Select currency to convert to: ");
+
+        System.out.println("1. Euro");
+
+        System.out.println("2. British Pound");
+
+        System.out.println("3. Japanese Yen");
+
+
+        int choice = scanner.nextInt();
+
+        double convertedAmount = 0;
+
+
+        switch (choice) {
+ 
+           case 1:
+ 
+               convertedAmount = usdAmount * 0.85; // Conversion rate for Euro
+                break;
+
+            case 2:
+
+                convertedAmount = usdAmount * 0.74; // Conversion rate for British Pound
+ 
+               break;
+
+            case 3:
+
+                convertedAmount = usdAmount * 113.41; // Conversion rate for Japanese Yen
+ 
+               break;
+
+            default:
+
+                System.out.println("Invalid choice");
+
+                return;
+ 
+       }
+
+        
+System.out.println("Converted amount: " + convertedAmount);
+ 
+   }
+
+}
